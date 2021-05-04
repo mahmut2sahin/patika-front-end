@@ -3,20 +3,57 @@
   background-color: white;
 }
 
+.navbar-brand {
+  margin-left: 7rem;
+}
+
 input.searche {
   height: 36px;
   max-width: 500px;
   background-color: #eef3f8;
   border: 0;
+  width: 300px !important;
 }
 
 input.searche::placeholder {
   font-size: 14px;
   color: gray;
-  background-image: url(/bootstraplinkedinclone/assets/search-solid.svg);
+  background-image: url(/bootstrap/odev-3/assets/search-solid.svg);
   background-repeat: no-repeat;
   background-size: 7%;
+  background-position-y: center;
+  background-position-x: 6%;
+  text-indent: 15%;
 }
+
+.fa-home::before {
+  margin-left: 30%;
+}
+
+.fa-user-friends::before {
+  margin-left: 10%;
+}
+
+.fa-briefcase::before {
+  margin-left: 30%;
+}
+
+.fa-comment-dots::before {
+  margin-left: 30%;
+}
+
+.fa-bell::before {
+  margin-left: 30%;
+}
+
+.fa-th::before {
+  margin-left: -30%;
+}
+
+.fa-chalkboard::before {
+  margin-left: 30%;
+}
+
 
 .body {
   background-color: #f3f2ef;
@@ -51,8 +88,8 @@ button.mediatext:hover {
 
 i {
   color: gray;
-  margin-top: 8px;
 }
+
 i:hover {
   color: black;
 }
