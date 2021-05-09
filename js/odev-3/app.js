@@ -104,9 +104,8 @@ buttonsContDOM = document.querySelector(".btn-container");
 buttonsContDOM.innerHTML = categoryListDOM;
 
 // ! menu listelendi
-const menuList = menu
-	.map((c) => {
-		return `<div class="menu-items col-lg-6 col-sm-12">
+const menuListArr = menu.map((c) => {
+	return `<div class="menu-items col-lg-6 col-sm-12">
   <img
     src=${c.img}
     alt=${c.title}
@@ -123,9 +122,25 @@ const menuList = menu
   </div>
 </div>
   `;
-	})
-	.join("");
+});
+let menuList = menuListArr.join("");
 
 document.querySelector(".section-center").innerHTML = menuList;
 
 // ! filtre fonksiyonu
+const btns = document.querySelectorAll(".btn-item");
+btns.forEach((e) => {
+	e.addEventListener("click", (ele) => {
+		document.querySelector(".section-center").innerHTML = "";
+		if (!(ele.currentTarget.innerHTML === "All")) {
+			menu.forEach((item, i) => {
+				let isDesired = item.category === ele.currentTarget.innerHTML;
+				if (isDesired) {
+					document.querySelector(".section-center").innerHTML += menuListArr[i];
+				}
+			});
+		} else {
+			document.querySelector(".section-center").innerHTML = menuList;
+		}
+	});
+});
