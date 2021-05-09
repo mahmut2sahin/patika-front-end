@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Chrome against localhost",
             "port": 8080,
-            "file": "${workspaceFolder}"
+            "file": "${workspaceFolder}/js/odev-2/index.html"
         }
     ]
 }
