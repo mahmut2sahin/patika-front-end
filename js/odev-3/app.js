@@ -102,3 +102,30 @@ const categoryListDOM = categories
 
 buttonsContDOM = document.querySelector(".btn-container");
 buttonsContDOM.innerHTML = categoryListDOM;
+
+// ! menu listelendi
+const menuList = menu
+	.map((c) => {
+		return `<div class="menu-items col-lg-6 col-sm-12">
+  <img
+    src=${c.img}
+    alt=${c.title}
+    class="photo"
+  />
+  <div class="menu-info">
+    <div class="menu-title">
+      <h4>${c.title}</h4>
+      <h4 class="price">${c.price}</h4>
+    </div>
+    <div class="menu-text">
+      ${c.desc}
+    </div>
+  </div>
+</div>
+  `;
+	})
+	.join("");
+
+document.querySelector(".section-center").innerHTML = menuList;
+
+// ! filtre fonksiyonu
