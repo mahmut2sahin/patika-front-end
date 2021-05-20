@@ -1,2 +1,2 @@
-#### Patika Frontend Web Development Patikası ####
-Eğitim süresince yaptığım ödev çözümlerimin olduğu repo.
+# Front-end Web Development Path from Patika.DEV #
+Homeworks for Front-end Web Development Path from Patika.DEV
